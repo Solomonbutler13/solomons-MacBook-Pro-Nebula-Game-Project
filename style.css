@@ -6,6 +6,18 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: lightslategray;
+}
+
+.container {
+    position: relative;
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .board {
@@ -34,34 +46,14 @@ body {
     background-color: purple; /* Brown color cover */
     transition: transform 0.3s ease;
     opacity: 0.8; /* Make cards opaque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 8);
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.board {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .stats {
     margin-bottom: 10px;
 }
 
-.game-container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 15px;
-}
 
 .card {
     position: relative;
@@ -126,22 +118,6 @@ body {
     pointer-events: none; /* Disable further clicks on matched cards */
 }
 
-.card .cover {
-    background-color: brown; /* Brown color cover */
-    cursor: pointer;
-    opacity: 0.8; /* Make cover opaque */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the cover */
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Black cover */
-    backface-visibility: hidden; /* Hide backface when flipped */
-    transform-style: preserve-3d; /* Preserve 3D transformations */
-    transition: transform 0.3s ease;
-
-}
 
 .card .emoji {
     position: absolute;
